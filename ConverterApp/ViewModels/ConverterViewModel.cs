@@ -12,19 +12,16 @@ public class ConverterViewModel : ViewModelBase
 {
     public static ConverterViewModel Instance = null;
     public static readonly Dictionary<string, string> CountryCodes = ConfigManager.CountryCodes;
-    public static bool Findable = false;
     public string Input => null;
-    
-    
-    private string imagePath = "123";
 
-    public string ImagePath
+    private Bitmap? imageFromBinding = ImageHelper.LoadFromResource(new Uri("avares://ConverterApp/Assets/uk.png"));
+    public Bitmap? ImageFromBinding
     {
-        get => imagePath;
-        set => this.RaiseAndSetIfChanged(ref imagePath, value);
+        get => imageFromBinding;
+        set => this.RaiseAndSetIfChanged(ref imageFromBinding, value);
     }
 
     public ConverterViewModel() => Instance = Instance is null ? this : Instance;
     
-    public void GetImagePath(string countryCode) => ImagePath = CountryCodes[countryCode];
+    public void GetImagePath(string countryCode) => ImageFromBinding = ImageHelper.LoadFromResource(new Uri("avares://ConverterApp/Assets/" + CountryCodes[countryCode]));
 }

@@ -44,9 +44,8 @@
                         Background="RoyalBlue"
                         Margin="10"
                         CornerRadius="20">
-                    <TextBlock Text="{Binding ImagePath}"
-                               HorizontalAlignment="Center"
-                               Margin="20"/>
+                    <Image Source="{Binding ImageFromBinding}"
+                           MaxWidth="200"/>
                 </Border>
             </StackPanel>
         </Border>

@@ -9,7 +9,7 @@ public static class ConfigManager
     static ConfigManager()
     {
         CountryCodes = new();
-        CountryCodes.Add("rus", "Russia");
-        CountryCodes.Add("uk", "United Kingdom");
+        CountryCodes.Add("rus", "rus.png");
+        CountryCodes.Add("uk", "uk.png");
     }
 }

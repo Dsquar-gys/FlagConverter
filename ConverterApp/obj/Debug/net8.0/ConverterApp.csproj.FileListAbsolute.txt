@@ -142,3 +142,4 @@
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Reactive.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Responsive.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Avalonia.Xaml.Interactivity.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/obj/Debug/net8.0/ConverterApp.sourcelink.json
