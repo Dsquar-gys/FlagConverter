@@ -135,3 +135,13 @@
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/obj/Debug/net8.0/ConverterApp.genruntimeconfig.cache
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/obj/Debug/net8.0/ref/ConverterApp.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/obj/Debug/net8.0/ConverterApp.sourcelink.json
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.Caching.Memory.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.Logging.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ConverterApp/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll

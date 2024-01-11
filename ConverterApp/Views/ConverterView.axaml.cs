@@ -22,7 +22,7 @@ public partial class ConverterView : UserControl
     private void TextBox_OnTextChanged(object? sender, TextChangedEventArgs e)
     {
         var textBox = sender as TextBox;
-        string input = textBox.Text;
+        string input = textBox.Text.ToLower();
 
         if (input != null )
             if (ConverterViewModel.CountryCodes.ContainsKey(input))
