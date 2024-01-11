@@ -8,8 +8,10 @@ public static class ConfigManager
     
     static ConfigManager()
     {
-        CountryCodes = new();
-        CountryCodes.Add("rus", "rus.png");
-        CountryCodes.Add("uk", "uk.png");
+        CountryCodes = new()
+        {
+            {"+7", "urs.png"},
+            {"+44", "uk.png"}
+        };
     }
 }

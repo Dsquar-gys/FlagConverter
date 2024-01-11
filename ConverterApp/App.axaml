@@ -4,12 +4,20 @@
              xmlns:local="using:ConverterApp"
              RequestedThemeVariant="Default">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
-
-    <Application.DataTemplates>
-        <local:ViewLocator/>
-    </Application.DataTemplates>
              
-    <Application.Styles>
-        <FluentTheme />
-    </Application.Styles>
+             <Application.Resources>
+                    <SolidColorBrush x:Key="Dark" Color="#62676B"/>
+                    <SolidColorBrush x:Key="Dark+1" Color="#A5A5A5" />
+                    <SolidColorBrush x:Key="Medium" Color="#DBC9BB" />
+                    <SolidColorBrush x:Key="Light-1" Color="#D9CDBD" />
+                    <SolidColorBrush x:Key="Light" Color="#E5E3D6" />
+             </Application.Resources>
+             
+             <Application.DataTemplates>
+                    <local:ViewLocator/>
+             </Application.DataTemplates>
+             
+             <Application.Styles>
+                    <FluentTheme />
+             </Application.Styles>
 </Application>

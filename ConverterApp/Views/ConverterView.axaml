@@ -3,10 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:ConverterApp.ViewModels"
-             xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
              mc:Ignorable="d"
-             d:DesignWidth="800"
-             d:DesignHeight="450"
+             d:DesignWidth="500" MinWidth="500" MaxWidth="600"
+             d:DesignHeight="400" MinHeight="400" MaxHeight="500"
              x:DataType="vm:ConverterViewModel"
              x:Class="ConverterApp.Views.ConverterView">
     
@@ -14,9 +13,7 @@
         <vm:ConverterViewModel/>
     </Design.DataContext>
     
-    <Grid ColumnDefinitions="*, *">
-        <Border Grid.Column="0"
-                Background="IndianRed">
+        <Border Background="{DynamicResource Light}">
             <StackPanel VerticalAlignment="Center">
                 <TextBox Width="250"
                          Height="50"
@@ -25,29 +22,34 @@
                          Margin="10"
                          Text="{Binding Input}"
                          TextChanged="TextBox_OnTextChanged"/>
-                <TextBlock Text="Loading..."
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Margin="10"/>
+                <StackPanel VerticalAlignment="Center">
+                    <TextBlock Text="Result:"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Margin="10"/>
+                    <Border Width="300"
+                            Height="200"
+                            Background="{DynamicResource Light-1}"
+                            Margin="10"
+                            Opacity="0.5"
+                            CornerRadius="20">
+                        <Image Name="FlagImage"
+                               Tag="{Binding CorrectName}"
+                               Source="{Binding ImageFromBinding}"
+                               MaxWidth="200"/>
+                    </Border>
+                </StackPanel>
+                <Button Width="100"
+                        Height="30"
+                        HorizontalAlignment="Center"
+                        Background="{DynamicResource Dark}"
+                        Margin="20"
+                        Content="Download"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Foreground="WhiteSmoke"
+                        IsEnabled="{Binding Downloadable}"
+                        Click="Button_SaveImage_OnClick"/> <!-- Bind Command -->
             </StackPanel>
         </Border>
-        <Border Grid.Column="1"
-                Background="CornflowerBlue">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="Result:"
-                           HorizontalAlignment="Center"
-                           VerticalAlignment="Center"
-                           Margin="10"/>
-                <!-- Define Path -->
-                <Border Width="300"
-                        Height="200"
-                        Background="RoyalBlue"
-                        Margin="10"
-                        CornerRadius="20">
-                    <Image Source="{Binding ImageFromBinding}"
-                           MaxWidth="200"/>
-                </Border>
-            </StackPanel>
-        </Border>
-    </Grid>
 </UserControl>

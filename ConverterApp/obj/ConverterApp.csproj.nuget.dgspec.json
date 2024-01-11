@@ -61,10 +61,6 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.6, )"
-            },
-            "Avalonia.Xaml.Behaviors": {
-              "target": "Package",
-              "version": "[11.0.6, )"
             }
           },
           "imports": [
