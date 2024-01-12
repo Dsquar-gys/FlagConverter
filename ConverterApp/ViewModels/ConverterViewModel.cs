@@ -53,8 +53,16 @@ public class ConverterViewModel : ViewModelBase
 
     private string DefineCorrectName(string countryName)
     {
-        countryName = new string(countryName.Where(ch => Char.IsLetter(ch) || ch == ' ' || ch == '-').ToArray());
-        var splitted = countryName.Split(' ').Where(w => w != "and" && w != "the").ToArray();
+        // Names without "and", "the", and taken before brackets or "of"
+        countryName = new string(countryName.TakeWhile(x => x != '[' || x != '(')
+                                            .Where(ch => Char.IsLetter(ch) || ch == ' ' || ch == '-')
+                                            .ToArray());
+        
+        var splitted = countryName.Split(' ')
+                                        .Where(w => w != "and" && w != "the")
+                                        .TakeWhile(w => w != "of")
+                                        .ToArray();
+        
         string corName; // correct flag name
         try
         {
