@@ -10,14 +10,22 @@ namespace ConverterApp.ViewModels;
 public class ConverterViewModel : ViewModelBase
 {
     public static ConverterViewModel Instance = null;
-    public static readonly Dictionary<string, string> CountryCodes = ConfigManager.CountryCodes_To_Names;
+    public static readonly Dictionary<string, Country> CountryCodes = ConfigManager.CountryCodes_To_Names;
     private static int notFoundCounter = 0;
     
     // One-way property for text box input data
     public string Input => null;
 
+    // Property for binding with converter
+    private Country _country;
+    public Country Country
+    {
+        get => _country;
+        set => this.RaiseAndSetIfChanged(ref _country, value);
+    }
+    
     // Property for flag image
-    private Bitmap? imageFromBinding;
+    private Bitmap? imageFromBinding; // TO DELETE
     public Bitmap? ImageFromBinding
     {
         get => imageFromBinding;
@@ -32,7 +40,7 @@ public class ConverterViewModel : ViewModelBase
     }
     
     // Property for image tag to contain saving name
-    private string _correctName;
+    private string _correctName; // TO DELETE
     public string CorrectName
     {
         get => _correctName;
@@ -41,12 +49,17 @@ public class ConverterViewModel : ViewModelBase
 
     // Sets static field 'Instance' just once
     public ConverterViewModel() => Instance = Instance is null ? this : Instance;
+
+    public void GetCountry(string countryKey) => Country = CountryCodes[countryKey];
     
     // Query for the proper image
-    public void GetImage(string countryKey)
+    public void GetImage(string countryKey) // TO DELETE
     {
         var CountryName = CountryCodes[countryKey];
-        CorrectName = DefineCorrectName(CountryName);
+
+        var s = Country;
+        
+        CorrectName = DefineCorrectName(CountryName.Name);
         ImageFromBinding = CorrectName is null ? null : ImageHelper.LoadFromResource(new Uri("avares://ConverterApp/Assets/Flags/" + CorrectName));
         Downloadable = true;
     }
@@ -82,7 +95,7 @@ public class ConverterViewModel : ViewModelBase
     public static void Autotest()
     {
         foreach (var country in ConfigManager.Countries)
-            Instance.DefineCorrectName(CountryCodes[country.OKSM.ToString()]);
+            Instance.DefineCorrectName(CountryCodes[country.OKSM.ToString()].Name);
         
         Console.WriteLine("Not Found: {0}", notFoundCounter);
     }

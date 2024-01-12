@@ -24,7 +24,7 @@ public partial class ConverterView : UserControl
 
         if (input != null )
             if (ConverterViewModel.CountryCodes.ContainsKey(input))
-                ConverterViewModel.Instance.GetImage(input);
+                ConverterViewModel.Instance.GetCountry(input);
     }
 
     private async void Button_SaveImage_OnClick(object? sender, RoutedEventArgs e)

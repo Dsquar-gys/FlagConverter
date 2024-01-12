@@ -35,7 +35,7 @@
                             CornerRadius="20">
                         <Image Name="FlagImage"
                                Tag="{Binding CorrectName}"
-                               Source="{Binding ImageFromBinding}"
+                               Source="{Binding Country, Converter={StaticResource FlagConverter}}"
                                MaxWidth="200"/>
                     </Border>
                 </StackPanel>

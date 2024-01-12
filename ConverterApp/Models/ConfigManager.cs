@@ -1,29 +1,34 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using Avalonia.Media;
 
 namespace ConverterApp.Models;
 
 public static class ConfigManager
 {
-    public static readonly Dictionary<string, string> CountryCodes_To_Names;
+    public static readonly Dictionary<string, Country> CountryCodes_To_Names;
     public static List<Country> Countries;
     public static readonly List<string> FlagNames;
     
     static ConfigManager()
     {
         FlagNames = new List<string>();
-        CountryCodes_To_Names = new Dictionary<string, string>();
+        CountryCodes_To_Names = new Dictionary<string, Country>();
         
         Configure();
+
+        var t = Countries[0].GetType().IsAssignableTo(typeof(IImage));
+        var s = Countries[0].GetType().IsAssignableTo(typeof(string));
         
         foreach (var country in Countries)
-            CountryCodes_To_Names.Add(country.Name.ToLower(), country.IOC_Code.ToLower(), country.ISO_Code.ToLower(), country.OKSM.ToString());
+            CountryCodes_To_Names.Add(country, country.IOC_Code.ToLower(), country.ISO_Code.ToLower(), country.OKSM.ToString());
     }
 
     private static void Configure()
     {
         // Reading flags' names from Assets
-        DirectoryInfo dir = new("../../../Assets/Flags");
+        DirectoryInfo dir = new("../../../Assets/Flags"); // new (Path.GetRelativePath(Environment.CurrentDirectory, "../../../Assets/Flags"));
         foreach (var file in dir.GetFiles("*.png"))
             FlagNames.Add(file.Name);
         
