@@ -19,8 +19,9 @@ public partial class ConverterView : UserControl
         var textBox = sender as TextBox;
         string input = textBox.Text.ToLower();
         
-        if(input == "autotest")
-            ConverterViewModel.Autotest();
+        
+        //if(input == "autotest")                               // REWORK
+        //    ConverterViewModel.Autotest();
 
         if (input != null )
             if (ConverterViewModel.CountryCodes.ContainsKey(input))

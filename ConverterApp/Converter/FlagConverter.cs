@@ -23,6 +23,7 @@ public class FlagConverter : IValueConverter
                 if (imageName is null)
                 {
                     // Return Default image
+                    return ImageHelper.DefaultImage();
                 }
 
                 imageUri = Path.Combine(imageUri, "Flags");
@@ -37,7 +38,7 @@ public class FlagConverter : IValueConverter
             
         }
 
-        return null;
+        return ImageHelper.DefaultImage();
     }
 
     public object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
