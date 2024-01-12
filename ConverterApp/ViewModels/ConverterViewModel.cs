@@ -17,7 +17,7 @@ public class ConverterViewModel : ViewModelBase
     public string Input => null;
 
     // Property for flag image
-    private Bitmap? imageFromBinding = null;
+    private Bitmap? imageFromBinding;
     public Bitmap? ImageFromBinding
     {
         get => imageFromBinding;

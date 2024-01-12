@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-
 namespace ConverterApp.Models;
 
-public partial class Country
+public class Country
 {
     public string Name { get; }
     public string ISO_Code { get; }

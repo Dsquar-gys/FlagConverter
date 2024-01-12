@@ -17,7 +17,7 @@ public static class ConfigManager
         Configure();
         
         foreach (var country in Countries)
-            CountryCodes_To_Names.Add<string, string>(country.Name.ToLower(), country.IOC_Code.ToLower(), country.ISO_Code.ToLower(), country.OKSM.ToString());
+            CountryCodes_To_Names.Add(country.Name.ToLower(), country.IOC_Code.ToLower(), country.ISO_Code.ToLower(), country.OKSM.ToString());
     }
 
     private static void Configure()
