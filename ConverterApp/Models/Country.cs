@@ -1,16 +1,13 @@
 using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 
 namespace ConverterApp.Models;
 
 public partial class Country
 {
-    public int Id { get; set; } // Principal key
-    public IEnumerable<City> Locations { get; set; }
-    public string Name { get; set; }
-    public string ISO_Code { get; set; }
-    public string IOC_Code { get; set; }
-    public int OKSM { get; set; }
+    public string Name { get; }
+    public string ISO_Code { get; }
+    public string IOC_Code { get; }
+    public int OKSM { get; }
 
     public Country(string name, string iso, string ioc, int oksm)
     {
@@ -20,5 +17,5 @@ public partial class Country
         OKSM = oksm;
     }
 
-    public static Country Default { get; } = new Country(null, null, null, 0);
+    public static Country Default { get; } = new Country("", "", "", 0);
 }

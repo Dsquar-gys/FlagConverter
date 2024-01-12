@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reactive;
-using Avalonia.Controls;
 using Avalonia.Media.Imaging;
-using Avalonia.Platform;
 using ConverterApp.Models;
 using ReactiveUI;
 
@@ -14,6 +11,7 @@ public class ConverterViewModel : ViewModelBase
 {
     public static ConverterViewModel Instance = null;
     public static readonly Dictionary<string, string> CountryCodes = ConfigManager.CountryCodes_To_Names;
+    private static int notFoundCounter = 0;
     
     // One-way property for text box input data
     public string Input => null;
@@ -55,18 +53,29 @@ public class ConverterViewModel : ViewModelBase
 
     private string DefineCorrectName(string countryName)
     {
-        countryName = new string(countryName.Where(ch => Char.IsLetter(ch)).ToArray());
-        string corName;
+        countryName = new string(countryName.Where(ch => Char.IsLetter(ch) || ch == ' ' || ch == '-').ToArray());
+        var splitted = countryName.Split(' ').Where(w => w != "and" && w != "the").ToArray();
+        string corName; // correct flag name
         try
         {
-            corName = ConfigManager.FlagNames.Where(fName => fName.ContainsAll(countryName.Split(' '))).ToArray()[0];
+            corName = ConfigManager.FlagNames.Where(fName => fName.ContainsAll(splitted)).ToArray()[0];
         }
         catch (Exception e)
         {
             Console.WriteLine("Flag for {0} not found", countryName);
+            notFoundCounter++;
             return null;
         }
 
         return corName;
+    }
+
+    // Autotest for checking name validation
+    public static void Autotest()
+    {
+        foreach (var country in ConfigManager.Countries)
+            Instance.DefineCorrectName(CountryCodes[country.OKSM.ToString()]);
+        
+        Console.WriteLine("Not Found: {0}", notFoundCounter);
     }
 }

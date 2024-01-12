@@ -30,16 +30,6 @@
 /home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.codeanalysis.common/3.8.0/lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.codeanalysis.scripting.common/3.8.0/lib/netcoreapp3.1/Microsoft.CodeAnalysis.Scripting.dll
 /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.1/ref/net8.0/Microsoft.CSharp.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.entityframeworkcore.abstractions/8.0.1/lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.entityframeworkcore/8.0.1/lib/net8.0/Microsoft.EntityFrameworkCore.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/lib/net8.0/Microsoft.Extensions.Caching.Memory.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/lib/net8.0/Microsoft.Extensions.DependencyInjection.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.logging/8.0.0/lib/net8.0/Microsoft.Extensions.Logging.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.options/8.0.0/lib/net8.0/Microsoft.Extensions.Options.dll
-/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.extensions.primitives/8.0.0/lib/net8.0/Microsoft.Extensions.Primitives.dll
 /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.1/ref/net8.0/Microsoft.VisualBasic.Core.dll
 /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.1/ref/net8.0/Microsoft.VisualBasic.dll
 /usr/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.1/ref/net8.0/Microsoft.Win32.Primitives.dll

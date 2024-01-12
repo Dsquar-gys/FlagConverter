@@ -1,13 +1,8 @@
-using System;
-using System.IO;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform.Storage;
 using ConverterApp.ViewModels;
-using SkiaSharp;
 
 namespace ConverterApp.Views;
 
@@ -23,6 +18,9 @@ public partial class ConverterView : UserControl
     {
         var textBox = sender as TextBox;
         string input = textBox.Text.ToLower();
+        
+        if(input == "autotest")
+            ConverterViewModel.Autotest();
 
         if (input != null )
             if (ConverterViewModel.CountryCodes.ContainsKey(input))
