@@ -19,13 +19,11 @@ public partial class ConverterView : UserControl
         var textBox = sender as TextBox;
         string input = textBox.Text.ToLower();
         
-        
         if(input == "autotest")
             ConverterViewModel.Autotest();
 
-        if (input != null )
-            if (ConverterViewModel.CountryCodes.ContainsKey(input))
-                ConverterViewModel.Instance.GetCountry(input);
+        if (ConverterViewModel.CountryCodes.ContainsKey(input))
+            ConverterViewModel.Instance.GetCountry(input);
     }
 
     private async void Button_SaveImage_OnClick(object? sender, RoutedEventArgs e)
@@ -35,7 +33,7 @@ public partial class ConverterView : UserControl
         var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = "Save Image",
-            SuggestedFileName = this.FlagImage.Tag.ToString()
+            SuggestedFileName = this.FlagImage.FileName
         });
         
         if (file is not null)

@@ -6,14 +6,13 @@ using Avalonia.Data;
 using Avalonia.Data.Converters;
 using Avalonia.Media;
 using ConverterApp.Models;
-using ConverterApp.ViewModels;
 
 namespace ConverterApp.Converter;
 
 public class FlagConverter : IValueConverter
 {
-    public static FlagConverter Instance { get; } = new();
-    
+    internal static string CorrectName { get; private set; } = ImageHelper.DefaultFileName;
+
     public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (value is Country country)
@@ -23,18 +22,9 @@ public class FlagConverter : IValueConverter
             // Output as image
             if (targetType.IsAssignableTo(typeof(IImage)))
             {
-                var imageName = DefineCorrectName(country.Name);
-                if (imageName is null)
-                {
-                    // Return Default image
-                    return ImageHelper.DefaultImage();
-                }
-
-                imageUri = Path.Combine(imageUri, "Flags");
-                imageUri = Path.Combine(imageUri, imageName);
-
-                // For image tag ---> suggested saving name
-                ConverterViewModel.Instance.FileName = imageName;
+                imageUri = DefineCorrectName(country.Name) == ImageHelper.DefaultFileName
+                    ? Path.Combine(imageUri, CorrectName)
+                    : Path.Combine(imageUri, "Flags", CorrectName);
                 
                 return ImageHelper.LoadFromResource(new Uri(imageUri));
             }
@@ -61,17 +51,17 @@ public class FlagConverter : IValueConverter
             .TakeWhile(w => w != "of")
             .ToArray();
         
-        string corName; // correct flag name
+        //string corName; // correct flag name
         try
         {
-            corName = ConfigManager.FlagNames.Where(fName => fName.ContainsAll(splitted)).ToArray()[0];
+            CorrectName = ConfigManager.FlagNames.Where(fName => fName.ContainsAll(splitted)).ToArray()[0];
         }
         catch (IndexOutOfRangeException e)
         {
             Console.WriteLine("Flag for {0} not found", countryName);
-            return null;
+            CorrectName = ImageHelper.DefaultFileName;
         }
 
-        return corName;
+        return CorrectName;
     }
 }

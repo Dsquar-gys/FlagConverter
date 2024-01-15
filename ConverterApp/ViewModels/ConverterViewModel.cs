@@ -22,22 +22,6 @@ public class ConverterViewModel : ViewModelBase
         get => _country;
         set => this.RaiseAndSetIfChanged(ref _country, value);
     }
-    
-    // Property for download button to be enabled or not
-    private bool _downloadable;
-    public bool Downloadable
-    {
-        get => _downloadable;
-        set => this.RaiseAndSetIfChanged(ref _downloadable, value);
-    }
-
-    // For image tag
-    private string _fileName;
-    public string FileName
-    {
-        get => _fileName;
-        set => this.RaiseAndSetIfChanged(ref _fileName, value);
-    }
 
     // Sets static field 'Instance' just once
     public ConverterViewModel() => Instance = Instance is null ? this : Instance;
@@ -50,10 +34,9 @@ public class ConverterViewModel : ViewModelBase
     {
         notFoundCounter = 0;
         foreach (var country in ConfigManager.Countries)
-        {
-            if (FlagConverter.DefineCorrectName(CountryCodes[country.OKSM.ToString()].Name) == null)
+            if (FlagConverter.DefineCorrectName(CountryCodes[country.OKSM.ToString()].Name) == ImageHelper.DefaultFileName)
                 notFoundCounter++;
-        }
+        
         Console.WriteLine("Not Found: {0}", notFoundCounter);
     }
 }
