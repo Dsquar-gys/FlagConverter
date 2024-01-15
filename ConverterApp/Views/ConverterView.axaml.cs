@@ -20,8 +20,8 @@ public partial class ConverterView : UserControl
         string input = textBox.Text.ToLower();
         
         
-        //if(input == "autotest")                               // REWORK
-        //    ConverterViewModel.Autotest();
+        if(input == "autotest")
+            ConverterViewModel.Autotest();
 
         if (input != null )
             if (ConverterViewModel.CountryCodes.ContainsKey(input))
