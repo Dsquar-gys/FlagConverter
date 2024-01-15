@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "TTZyFMIKzCmidsPs7cunSCrAghH+xkeAfVbeP6ed2qQNnUJ7FalkPVkGNAZHF0ms4ZGk5hrmiU4k4kvkFjhG5g==",
+  "success": true,
+  "projectFilePath": "/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/CountryConverter.csproj",
+  "expectedPackageFiles": [
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/avalonia/11.0.6/avalonia.11.0.6.nupkg.sha512",
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/avalonia.buildservices/0.0.29/avalonia.buildservices.0.0.29.nupkg.sha512",
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/avalonia.remote.protocol/11.0.6/avalonia.remote.protocol.11.0.6.nupkg.sha512",
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microcom.runtime/0.11.0/microcom.runtime.0.11.0.nupkg.sha512",
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

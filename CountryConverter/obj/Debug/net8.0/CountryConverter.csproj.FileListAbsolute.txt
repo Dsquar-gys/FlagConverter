@@ -1,0 +1,14 @@
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/bin/Debug/net8.0/CountryConverter.deps.json
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/bin/Debug/net8.0/CountryConverter.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/bin/Debug/net8.0/CountryConverter.pdb
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.csproj.AssemblyReference.cache
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/Avalonia/Resources.Inputs.cache
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.GeneratedMSBuildEditorConfig.editorconfig
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.AssemblyInfoInputs.cache
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.AssemblyInfo.cs
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.csproj.CoreCompileInputs.cache
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.sourcelink.json
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/refint/CountryConverter.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/CountryConverter.pdb
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/obj/Debug/net8.0/ref/CountryConverter.dll

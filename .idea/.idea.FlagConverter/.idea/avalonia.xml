@@ -6,6 +6,9 @@
         <entry key="ConverterApp/App.axaml" value="ConverterApp/ConverterApp.csproj" />
         <entry key="ConverterApp/Views/ConverterView.axaml" value="ConverterApp/ConverterApp.csproj" />
         <entry key="ConverterApp/Views/MainWindow.axaml" value="ConverterApp/ConverterApp.csproj" />
+        <entry key="ExampleApp/App.axaml" value="ExampleApp/ExampleApp.csproj" />
+        <entry key="ExampleApp/Views/ConverterView.axaml" value="ExampleApp/ExampleApp.csproj" />
+        <entry key="ExampleApp/Views/MainWindow.axaml" value="ExampleApp/ExampleApp.csproj" />
       </map>
     </option>
   </component>
