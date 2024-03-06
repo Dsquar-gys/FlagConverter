@@ -132,8 +132,8 @@
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/refint/ExampleApp.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ExampleApp.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ExampleApp.pdb
-/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ExampleApp.csproj.CopyComplete
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ExampleApp.genruntimeconfig.cache
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ref/ExampleApp.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/CountryConverter.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/CountryConverter.pdb
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ExampleApp.csproj.Up2Date

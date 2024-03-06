@@ -6,7 +6,7 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-    <RootNamespace>ConverterApp</RootNamespace>
+    <RootNamespace>ExampleApp</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,4 +28,5 @@
   <ItemGroup>
     <ProjectReference Include="..\CountryConverter\CountryConverter.csproj" />
   </ItemGroup>
+  
 </Project>

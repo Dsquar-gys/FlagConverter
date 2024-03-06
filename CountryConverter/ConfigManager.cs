@@ -2,25 +2,20 @@ namespace CountryConverter;
 
 public static class ConfigManager
 {
-    public static Dictionary<string, Country> CountryCodes_To_Names { get; } = new();
+    public static Dictionary<string, Country> CountryCodesToNames { get; } = new();
     public static List<Country> Countries { get; private set; }
-    public static List<string> FlagNames { get; private set; }
 
     static ConfigManager()
     {
-        Configure();
+        InitCountries();
         
         // Setting determination
-        foreach (var country in Countries)
-            CountryCodes_To_Names.Add(country, country.IOC_Code.ToLower(), country.ISO_Code.ToLower(), country.OKSM.ToString());
+        foreach (var country in Countries!)
+            CountryCodesToNames.Add(country, country.IOC_Code.ToLower(), country.ISO_Code.ToLower(), country.OKSM.ToString());
     }
     
-    private static void Configure()
+    private static void InitCountries()
     {
-        // Reading flags' names from Assets
-        DirectoryInfo dir = new("../../../Assets/Flags");
-        FlagNames = new List<string>(dir.GetFiles("*.png").Select(file => file.Name));
-        
         // Initializing countries
         Countries = new List<Country>() { 
                     new Country( "Afghanistan",
