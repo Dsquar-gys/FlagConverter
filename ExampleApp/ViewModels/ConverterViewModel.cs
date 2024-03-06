@@ -8,7 +8,7 @@ namespace ExampleApp.ViewModels;
 public class ConverterViewModel : ViewModelBase
 {
     public static ConverterViewModel Instance = null;
-    public static readonly Dictionary<string, Country> CountryCodes = ConfigManager.CountryCodes_To_Names;
+    public static Dictionary<string, Country> CountryCodes => ConfigManager.CountryCodesToNames;
     private static int notFoundCounter = 0;
     
     // One-way property for text box input data
@@ -33,7 +33,7 @@ public class ConverterViewModel : ViewModelBase
     {
         notFoundCounter = 0;
         foreach (var country in ConfigManager.Countries)
-            if (CountryConverter.CountryConverter.DefineCorrectName(CountryCodes[country.OKSM.ToString()].Name) == ImageHelper.DefaultFileName)
+            if (CountryConverter.CountryConverter.DefineCorrectName(CountryCodes[country.OKSM.ToString()].Name) == Resources.DefaultFileName)
                 notFoundCounter++;
         
         Console.WriteLine("Not Found: {0}", notFoundCounter);

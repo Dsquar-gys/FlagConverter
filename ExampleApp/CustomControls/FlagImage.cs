@@ -1,6 +1,5 @@
 using Avalonia;
 using Avalonia.Controls;
-using CountryConverter;
 
 namespace ExampleApp.CustomControls;
 
@@ -16,7 +15,7 @@ public class FlagImage : Image
     }
     
     public static readonly StyledProperty<string> FileNameProperty =
-        AvaloniaProperty.Register<FlagImage, string>(nameof(FileName), defaultValue: ImageHelper.DefaultFileName);
+        AvaloniaProperty.Register<FlagImage, string>(nameof(FileName), defaultValue: CountryConverter.Resources.DefaultFileName);
 
     public string FileName
     {
@@ -29,7 +28,7 @@ public class FlagImage : Image
         if (change.Property.Name == "Source")
         {
             FileName = CountryConverter.CountryConverter.CorrectName;
-            Downloadable = FileName != ImageHelper.DefaultFileName;
+            Downloadable = FileName != CountryConverter.Resources.DefaultFileName;
         }
         base.OnPropertyChanged(change);
     }
