@@ -10,7 +10,7 @@ country your own flag.
 Each country can be got be these codes. Or you can use country name.
 ## Assets
 Library provides its own baked assets (Embedded) that can be received from assembly.
-To change assets directory [https://github.com/Dsquar-gys/FlagConverter/blob/master/CountryConverter/Resources.cs]**Resources.cs** contains:
+To change assets directory [**Resources.cs**](https://github.com/Dsquar-gys/FlagConverter/blob/master/CountryConverter/Resources.cs) contains:
 ```cs
 public static void ChangeAssetsFolder(DirectoryInfo assetsFolder)
 ```
