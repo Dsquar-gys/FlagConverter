@@ -124,6 +124,18 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.6, )"
+            },
+            "Avalonia.Xaml.Behaviors": {
+              "target": "Package",
+              "version": "[11.0.10, )"
+            },
+            "Avalonia.Xaml.Interactions": {
+              "target": "Package",
+              "version": "[11.0.10, )"
+            },
+            "Avalonia.Xaml.Interactivity": {
+              "target": "Package",
+              "version": "[11.0.10, )"
             }
           },
           "imports": [

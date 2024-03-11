@@ -137,3 +137,10 @@
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/CountryConverter.dll
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/CountryConverter.pdb
 /home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/obj/Debug/net8.0/ExampleApp.csproj.Up2Date
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Custom.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.DragAndDrop.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Draggable.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Events.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactions.Responsive.dll
+/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/ExampleApp/bin/Debug/net8.0/Avalonia.Xaml.Interactivity.dll

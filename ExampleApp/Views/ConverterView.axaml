@@ -2,6 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="clr-namespace:Avalonia.Xaml.Interactivity;assembly=Avalonia.Xaml.Interactivity"
+             xmlns:iac="clr-namespace:Avalonia.Xaml.Interactions.Core;assembly=Avalonia.Xaml.Interactions"
              xmlns:vm="using:ExampleApp.ViewModels"
              xmlns:cc="using:ExampleApp.CustomControls"
              mc:Ignorable="d"
@@ -21,8 +23,16 @@
                          FontSize="24"
                          Watermark="Insert country code"
                          Margin="10"
-                         Text="{Binding Input}"
-                         TextChanged="TextBox_OnTextChanged"/>
+                         Text="{Binding Input}">
+                    
+                    <i:Interaction.Behaviors>
+                        <iac:EventTriggerBehavior EventName="TextChanged">
+                            <!-- ReSharper disable once Xaml.PossibleNullReferenceException -->
+                            <iac:InvokeCommandAction Command="{Binding CheckCountryCommand}"/>
+                        </iac:EventTriggerBehavior>
+                    </i:Interaction.Behaviors>
+                    
+                </TextBox>
                 <StackPanel VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
@@ -47,17 +57,46 @@
                                MaxWidth="200"/>
                     </Border>
                 </StackPanel>
-                <Button Width="100"
-                        Height="30"
-                        HorizontalAlignment="Center"
-                        Background="{DynamicResource Dark}"
-                        Margin="20"
-                        Content="Download"
-                        HorizontalContentAlignment="Center"
-                        VerticalContentAlignment="Center"
-                        Foreground="WhiteSmoke"
-                        IsEnabled="{Binding #FlagImage.Downloadable}"
-                        Click="Button_SaveImage_OnClick"/> <!-- Bind Command -->
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    
+                    <Button Width="110"
+                            Height="30"
+                            HorizontalAlignment="Center"
+                            Background="{DynamicResource Dark}"
+                            Margin="10,20"
+                            Content="Reset Assets"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Foreground="WhiteSmoke"
+                            Command="{Binding ResetAssetsCommand}"/>
+                    
+                    <Button Width="100"
+                            Height="30"
+                            HorizontalAlignment="Center"
+                            Background="{DynamicResource Dark}"
+                            Margin="10,20"
+                            Content="Download"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Foreground="WhiteSmoke"
+                            IsEnabled="{Binding #FlagImage.Downloadable}"
+                            Command="{Binding SaveImageCommand}"
+                            CommandParameter="{Binding $parent[Window]}"/>
+                    
+                    <Button Width="110"
+                            Height="30"
+                            HorizontalAlignment="Center"
+                            Background="{DynamicResource Dark}"
+                            Margin="10,20"
+                            Content="Set Assets"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Foreground="WhiteSmoke"
+                            Command="{Binding SetAssetsCommand}"
+                            CommandParameter="{Binding $parent[Window]}"/>
+                    
+                </StackPanel>
             </StackPanel>
         </Border>
 </UserControl>

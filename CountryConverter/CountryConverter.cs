@@ -11,7 +11,11 @@ public class CountryConverter : IValueConverter
 
     public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
-        if (value is not Country country) return Resources.DefaultImage;
+        if (value is not Country country)
+        {
+            CorrectName = Resources.DefaultFileName;
+            return Resources.DefaultImage;
+        }
             
         // Output as image
         if (targetType.IsAssignableTo(typeof(IImage)))

@@ -12,35 +12,4 @@ public partial class ConverterView : UserControl
     {
         InitializeComponent();
     }
-
-    // Handler on text changed event
-    private void TextBox_OnTextChanged(object? sender, TextChangedEventArgs e)
-    {
-        var textBox = sender as TextBox;
-        string input = textBox.Text.ToLower();
-        
-        if(input == "autotest")
-            ConverterViewModel.Autotest();
-
-        if (ConverterViewModel.CountryCodes.ContainsKey(input))
-            ConverterViewModel.Instance.GetCountry(input);
-    }
-
-    private async void Button_SaveImage_OnClick(object? sender, RoutedEventArgs e)
-    {
-        var topLevel = TopLevel.GetTopLevel(this);
-        
-        var file = await topLevel.StorageProvider.SaveFilePickerAsync(new FilePickerSaveOptions
-        {
-            Title = "Save Image",
-            SuggestedFileName = this.FlagImage.FileName
-        });
-        
-        if (file is not null)
-        {
-            // Open writing stream from the file.
-            await using var stream = await file.OpenWriteAsync();
-            (this.FlagImage.Source as Bitmap).Save(stream, 10);
-        }
-    }
 }
