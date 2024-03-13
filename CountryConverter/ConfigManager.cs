@@ -222,7 +222,7 @@ public static class ConfigManager
                                  "CG",
                                  "COG",
                                  178 ),
-                    new Country( "Congo, Democratic Republic of the",
+                    new Country( "Democratic Republic of the Congo",
                                  "CD",
                                  "COD",
                                  180 ),

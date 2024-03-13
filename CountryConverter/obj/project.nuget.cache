@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H41D8SIIzlFNKoZwAHmRnQejCF+7ZxiwTfMpmQMpTG47LR4ttJGl46K6w58wdtqQ22k2yDy6Ep+4LOnRGco1gw==",
+  "dgSpecHash": "0zWfoTqzsC3XLmeSYOLzpgTRX4+F045EqhDhFL8a3wjQIsCXSM6s8OwY8HTjqKsxqg49wruCB+1EKrUKMFjyLg==",
   "success": true,
   "projectFilePath": "/home/dmitrichenkoda@kvant-open.spb.ru/RiderProjects/FlagConverter/CountryConverter/CountryConverter.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,9 @@
     "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/avalonia.buildservices/0.0.29/avalonia.buildservices.0.0.29.nupkg.sha512",
     "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/avalonia.remote.protocol/11.0.6/avalonia.remote.protocol.11.0.6.nupkg.sha512",
     "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microcom.runtime/0.11.0/microcom.runtime.0.11.0.nupkg.sha512",
-    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512"
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/system.componentmodel.annotations/4.5.0/system.componentmodel.annotations.4.5.0.nupkg.sha512",
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.netcore.app.ref/8.0.3/microsoft.netcore.app.ref.8.0.3.nupkg.sha512",
+    "/home/dmitrichenkoda@kvant-open.spb.ru/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.3/microsoft.aspnetcore.app.ref.8.0.3.nupkg.sha512"
   ],
   "logs": []
 }
